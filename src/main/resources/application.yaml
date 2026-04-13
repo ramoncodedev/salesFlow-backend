@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: SalesFlow
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/salesflow_crm
+    username: postgres
+    password: backend#26
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
